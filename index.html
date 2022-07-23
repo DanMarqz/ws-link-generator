@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crea tu link de contacto de Whatsapp</title>
+  <script src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header>
+      <h1>Generador de link de contacto de Whatsapp</h1>
+
+    </header>
+
+    <section>
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="numero-contacto" placeholder="Numero de contacto"
+          oninput="generarLink()" onchange="generarLink()">
+        <label for="numero-contacto" class="form-label">Numero de Contacto</label>
+        <div id="numero-contactoHelper" class="form-text">
+          El numero debe tener codigo de area y numero de contacto, por ejemplo: 58123456789
+        </div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <textarea class="form-control" id="mensaje-contacto"
+          placeholder="Introduzca el mensaje que quiere que aparezca cuando se contacten"
+          oninput="generarLink()" onchange="generarLink()"></textarea>
+        <label for="mensaje-contacto" class="form-label">Mensaje de contacto</label>
+      </div>
+
+      <h3>Link generado</h3>
+      <a id="link""></a>
+
+      <div class="d-grid gap-2 col-6   mx-auto mt-3 mb-3">
+        <a class="btn btn-success" role="button" id="probar" target="_blank">Probar</a>
+        <button class="btn btn-success" type="button" id="copiar" onclick="copiarLink(link.value)">Copiar</button>
+      </div>
+
+      <p id="copiado"></p>
+
+    </section>
+
+    <footer>
+      <p>Generador de link de contacto de Whatsapp &copy by <a href="https://www.linkedin.com/in/danmarqz/"
+          target="_blank">Daniel Marquez</a> </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"></script>
+  </div>
+</body>
+
+</html>
